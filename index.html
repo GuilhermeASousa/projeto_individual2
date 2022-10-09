@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cripto">
+            <form name="form1">
+                <h1 class="titulo">KryptósGráphein</h1>
+                <h3 class="subtitulo">Escolha o método de Criptografia:</h3>
+                <div class="botoes-metodos">
+                    <div class="botao-base64">
+                        <input type="radio" class="botaoradio-base64" name="btnradio" id="radiobase64" autocomplete="off" onclick="mostrarSelecao()">
+                        <label for="radiobase64" class="teste">Base64</label>
+                    </div>
+                    <div class="botao-cifra">
+                        <input type="radio" class="botaoradio-cifra" name="btnradio" id="radiocifra" autocomplete="off" onclick="mostrarSelecao()">
+                        <label for="radiocifra">Cifra de Cesar</label>
+                    </div>
+                </div>
+                <br><br>
+                <div class="selecao-passos" id="selecaopassos">
+                    <h3>Quantidade de passos</h3>
+                    <br>
+                    <input type="range" class="tamanho-cifra" min="-26" max="26" id="qtd" value="0">
+                    <p id="escolha">0</p>
+                </div>
+                <h3>O que deseja?</h3>
+                <div class="botoes-escolhas">
+                    <div class="botao-criptografar">
+                        <input type="radio" class="botaoCriptografar" name="vbtn-radio" id="radioCriptografar" autocomplete="off">
+                        <label for="radioCriptografar">Criptografar</label>
+                    </div>
+                    <div class="botao-descriptografar">
+                        <input type="radio" class="botaoDescriptografar" name="vbtn-radio" id="radioDescriptografar" autocomplete="off">
+                        <label for="radioDescriptografar">Descriptografar</label>
+                    </div> 
+                </div>
+                <br><br>
+                <div class="entrada-saida">
+                    <div class="mb-3">
+                        <textarea class="caixa-entrada" id="caixaEntrada" rows="3" placeholder="Texto a ser Criptografado / Descriptografado"></textarea>
+                    </div>
+                    <br>
+                    <button type="button" id="btn" class="botaoConfirmar">Confirmar</button>
+                    <br><br>
+                    <div class="texto-saida" id="textoSaida">
+                        <h3>Resultado:</h3>
+                        <textarea class="caixa-saida" id="caixaSaida" rows="3" placeholder="Resultado" readonly></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/funcao.js"></script>
