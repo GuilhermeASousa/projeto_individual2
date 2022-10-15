@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>KryptósGráphein</title>
 </head>
 
 <body>
@@ -29,17 +29,17 @@
                 <div class="selecao-passos" id="selecaopassos">
                     <h3>Quantidade de passos</h3>
                     <br>
-                    <input type="range" class="tamanho-cifra" min="-26" max="26" id="qtd" value="0">
+                    <input type="range" class="tamanho-cifra" min="-25" max="25" id="qtd" value="0">
                     <p id="escolha">0</p>
                 </div>
                 <h3>O que deseja?</h3>
                 <div class="botoes-escolhas">
                     <div class="botao-criptografar">
-                        <input type="radio" class="botaoCriptografar" name="vbtn-radio" id="radioCriptografar" autocomplete="off">
+                        <input type="radio" class="botaoCriptografar" name="vbtn-radio" id="radioCriptografar" autocomplete="off" onclick="atualizarBotao()">
                         <label for="radioCriptografar">Criptografar</label>
                     </div>
                     <div class="botao-descriptografar">
-                        <input type="radio" class="botaoDescriptografar" name="vbtn-radio" id="radioDescriptografar" autocomplete="off">
+                        <input type="radio" class="botaoDescriptografar" name="vbtn-radio" id="radioDescriptografar" autocomplete="off" onclick="atualizarBotao()">
                         <label for="radioDescriptografar">Descriptografar</label>
                     </div> 
                 </div>
@@ -49,7 +49,7 @@
                         <textarea class="caixa-entrada" id="caixaEntrada" rows="3" placeholder="Texto a ser Criptografado / Descriptografado"></textarea>
                     </div>
                     <br>
-                    <button type="button" id="btn" class="botaoConfirmar">Confirmar</button>
+                    <button type="button" id="btn" class="botaoConfirmar"></button>
                     <br><br>
                     <div class="texto-saida" id="textoSaida">
                         <h3>Resultado:</h3>

@@ -10,17 +10,15 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    width: 90%;
 }
 
 .cripto {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: center;
     text-align: center;
     background-color: rgba(13, 48, 83, 0.932);
-    width: 30%;
-    min-width: 430px;
+    width: 100%;  
     color: white;
     border-radius: 20px;
 }
@@ -42,7 +40,12 @@ form {
     align-items: center;
 }
 
-.botaoradio-base64 {
+.botaoradio-base64,
+.botaoradio-cifra,
+.botaoCriptografar,
+.botaoDescriptografar,
+.selecao-passos,
+.texto-saida {
     display: none;
 }
 
@@ -56,15 +59,20 @@ form {
     transition: 0.5s;
 }
 
-.botao-base64 input[type="radio"]:checked+label {
+.botao-base64 input[type="radio"]:checked+label,
+.botao-cifra input[type="radio"]:checked+label,
+.botao-criptografar input[type="radio"]:checked+label,
+.botao-descriptografar input[type="radio"]:checked+label,
+.botaoConfirmar:active {
     background-color: white;
     color: #0d3053;
     transition: 0.5s;
 }
 
-.botaoradio-cifra {
-    display: none;
+.botao-base64{
+    margin-left: -5%;
 }
+
 
 .botao-cifra label {
     background-color: #55798f;
@@ -76,12 +84,6 @@ form {
     transition: 0.5s;
 }
 
-.botao-cifra input[type="radio"]:checked+label {
-    background-color: white;
-    color: #0d3053;
-    transition: 0.5s;
-}
-
 .botoes-escolhas {
     display: flex;
     justify-content: space-evenly;
@@ -89,43 +91,24 @@ form {
     flex-flow: row wrap;
 }
 
-.botaoCriptografar {
-    display: none;
-}
-
 .botao-criptografar label {
     background-color: #55798f;
     display: block;
-    padding: 10%;
+    padding: 6%;
+    margin-left: -12%;
     width: min-content;
     border-radius: 15px;
     font-family: 'Michroma', sans-serif;
     transition: 0.5s;
-}
-
-.botao-criptografar input[type="radio"]:checked+label {
-    background-color: white;
-    color: #0d3053;
-    transition: 0.5s;
-}
-
-.botaoDescriptografar {
-    display: none;
 }
 
 .botao-descriptografar label {
     background-color: #55798f;
     display: block;
-    padding: 8%;
+    padding: 5%;
     width: min-content;
     border-radius: 15px;
     font-family: 'Michroma', sans-serif;
-    transition: 0.5s;
-}
-
-.botao-descriptografar input[type="radio"]:checked+label {
-    background-color: white;
-    color: #0d3053;
     transition: 0.5s;
 }
 
@@ -136,10 +119,6 @@ h3 {
     color: rgba(13, 48, 83, 0.932);
     border-radius: 10px;
     margin-top: -2%;
-}
-
-.selecao-passos {
-    display: none;
 }
 
 .tamanho-cifra {
@@ -168,10 +147,6 @@ h3 {
     resize: none;
 }
 
-.texto-saida {
-    display: none;
-}
-
 .botaoConfirmar {
     font-family: 'Michroma', sans-serif;
     background-color: #55798f;
@@ -180,10 +155,9 @@ h3 {
     border-radius: 10px;
     color: white;
     width: min-content;
+    display: none;
 }
 
-.botaoConfirmar:active {
-    background-color: white;
-    color: #0d3053;
-    transition: 0.5s;
+#textoSaida{
+    margin-bottom: 5%;
 }
